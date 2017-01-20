@@ -101,6 +101,73 @@ public class IntegerArrayTools
     return sum;
   }
   
+  /** Find the largest number of the integer array
+    * @return the largest number
+    */
+  public int getMax()
+  {
+    int max = arrayData[0];
+    
+    for(int i = 1; i < arrayCount; i++)
+    {
+     if (arrayData[i] > max)
+       max = arrayData[i];
+    }
+    return max;
+  }
+  
+  /** Find the index of the largest number of the integer array
+    * @return the index of the largest number
+    */
+  public int getMaxIndex()
+  {
+    int max = arrayData[0];
+    int n = 0;
+    
+    for(int i = 1; i < arrayCount; i++)
+    {
+     if (arrayData[i] > max)
+     {
+       max = arrayData[i];
+       n = i;
+     }
+    }
+    return n;
+  }
+  
+  /** Find the smallest number of the integer array
+    * @return the smallest number
+    */
+  public int getMin()
+  {
+    int min = arrayData[0];
+    
+    for(int i = 1; i < arrayCount; i++)
+    {
+     if (arrayData[i] < min)
+       min = arrayData[i];
+    }
+    return min;    
+  }
+  
+  /** Find the index of the smallest number of the integer array
+    * @return the indexof the smallest number
+    */
+  public int getMinIndex()
+  {
+    int min = arrayData[0];
+    int n = 0;
+    
+    for(int i = 1; i < arrayCount; i++)
+    {
+     if (arrayData[i] < min)
+     {
+       min = arrayData[i];
+       n = i;
+     }
+    }
+    return n;    
+  }
   
   /** Tests the various array tools */
   public static void main (String[] args)
@@ -113,16 +180,11 @@ public class IntegerArrayTools
     System.out.println ("The sum is " + myArray.sumArray());
     
     // Un-comment these lines one at a time after you have written the appropriate code
-//    System.out.println ("The largest item is " + myArray.getMax() ); 
-//    System.out.println ("The largest item is at index " + myArray.getMaxIndex());
+    System.out.println ("The largest item is " + myArray.getMax() ); 
+    System.out.println ("The largest item is at index " + myArray.getMaxIndex());
 
-//    System.out.println ("The smallest item is " + myArray.getMin() );
-//    System.out.println ("The smallest item is at index " + myArray.getMinIndex());
+    System.out.println ("The smallest item is " + myArray.getMin() );
+    System.out.println ("The smallest item is at index " + myArray.getMinIndex());
     
   }
 }
-    
-    
-  
-  
-         
